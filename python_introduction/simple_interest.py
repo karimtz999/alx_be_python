@@ -1,5 +1,5 @@
-P = int(1000)
-R = float(0.05)
-T = int(3)
-I = P * T * R
-print(f"The simple interest is: {I}")
+  ## Access every 3rd element in a list
+  i = 0
+  while i < len(a):
+    print(a[i])
+    i = i + 3

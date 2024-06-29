@@ -1,5 +1,5 @@
-number1 = int(10)
-number2 = int(5)
+number1 = 10
+number2 = 5
 Result_Addition = number1 + number2
 Result_Subtraction = number1 - number2
 Result_Multiplication  = number2 * number1
