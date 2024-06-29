@@ -19,16 +19,12 @@ match priority:
     case _:
         reminder = "Invalid priority level. Please enter high, medium, or low."
 
-# Modify the reminder if the task is time-bound
+# Modify the reminder if the task is time-bound and priority is valid
 if priority in ['high', 'medium', 'low']:
     if time_bound == "yes":
-        reminder = "Reminder: " + reminder + " that requires immediate attention today!"
+        reminder += " that requires immediate attention today!"
     else:
-        if priority == 'low':
-            reminder = "Note: " + reminder + ". Consider completing it when you have free time."
-        else:
-            reminder = "Reminder: " + reminder + "."
+        reminder += ". Consider completing it when you have free time."
 
 # Print the customized reminder
-print(reminder)
-
+print(f"Reminder: {reminder}")
