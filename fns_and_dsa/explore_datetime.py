@@ -15,7 +15,7 @@ def calculate_future_date():
     Calculates and displays the future date after adding a specified number of days.
     """
     try:
-        num_days = int(input("Enter the number of days to add: "))
+        num_days = int(input("Enter the number of days to add to the current date: "))
         current_date = datetime.now()
         future_date = current_date + timedelta(days=num_days)
         formatted_future_date = future_date.strftime("%Y-%m-%d")
