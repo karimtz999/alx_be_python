@@ -1,4 +1,6 @@
-# bank_account.py
+class InsufficientFundsError(Exception):
+    def __str__(self):
+        return "Insufficient funds."
 
 class BankAccount:
     def __init__(self, initial_balance=0):
@@ -8,11 +10,13 @@ class BankAccount:
         self.account_balance += amount
 
     def withdraw(self, amount):
-        if self.account_balance >= amount:
+        if amount <= self.account_balance:
             self.account_balance -= amount
             return True
         else:
             return False
 
     def display_balance(self):
+        return f"Current Balance: ${self.account_balance}"
+balance(self):
         print(f"Current balance:")
