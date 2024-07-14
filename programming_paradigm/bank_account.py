@@ -1,6 +1,4 @@
-class InsufficientFundsError(Exception):
-    def __str__(self):
-        return "Insufficient funds."
+# bank_account.py
 
 class BankAccount:
     def __init__(self, initial_balance=0):
@@ -14,11 +12,8 @@ class BankAccount:
             self.account_balance -= amount
             return True
         else:
-            raise InsufficientFundsError()
+            return False
 
     def display_balance(self):
-        return f"Current Balance: ${self.account_balance}"
-
-    def print_balance(self):
-        print(f"Current balance: ${self.account_balance}")
+        print(f"Current Balance: ${self.account_balance}")
 
